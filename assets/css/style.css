@@ -1,0 +1,153 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:aquamarine; /* Un azul claro como el cielo de NZ */
+}
+
+/* --- ESTILOS BASE (Para Celulares - Mobile First) --- */
+
+.contenedor-productos {
+    display: flex;
+    flex-direction: column; /* En el celular, los productos van uno abajo del otro */
+    gap: 15px;
+    padding: 10px;
+}
+
+.tarjeta-producto {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+}
+.img-fluid,
+.tarjeta-producto img {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+p {
+    color: #333;
+    font-size: 16px;
+    text-align: center;
+}
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+nav {
+    background-color: #81c490;
+    padding: 10px 20px;
+    border-bottom: 1px solid #141313;
+}
+
+
+/* --- MEDIA QUERY (Para Computadoras - Pantallas de 992px o más) --- */
+@media (min-width: 992px) {
+    .contenedor-productos {
+        display: grid;
+        /* ¡Magia! En la computadora se transforma en una cuadrícula de 2 columnas */
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+}
+/* El contenedor padre se vuelve flexible */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* El contenido principal se expande por las primeras 3 columnas */
+.contenido {
+    grid-column: span 3;
+}
+
+/* El aside se queda automáticamente en la cuarta columna */
+.barra-lateral {
+    grid-column: span 1;
+    background-color: #e9f5db; /* Un color verdoso como los bosques de NZ */
+    padding: 15px;
+    border-radius: 8px;
+}
+/* Cuando la pantalla sea más grande que una tablet (768px), se ponen de costado */
+@media (min-width: 768px) {
+.contenedor-principal {
+    flex-direction: row; /* Cambia la dirección a horizontal */
+    }
+}
+@media (min-width: 992px) {
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 20px;
+}
+.contenido {
+    grid-column: span 3; /* El contenido ocupa las primeras 3 columnas */
+}
+
+.barra-lateral {
+    grid-column: span 1; /* La barra lateral ocupa la última columna */
+    background-color: #e9f5db; /* Un color verdoso como los bosques de NZ */
+    padding: 15px;
+    border-radius: 8px;
+}
+}
+@media (min-width: 1200px) {
+.contenedor-principal {
+    grid-template-columns: repeat(5, 1fr); /* 5 columnas iguales */
+}
+
+.contenido {
+    grid-column: span 4; /* El contenido ocupa las primeras 4 columnas */
+}
+
+.barra-lateral {
+    grid-column: span 1; /* La barra lateral ocupa la última columna */
+    background-color: #e9f5db; /* Un color verdoso como los bosques de NZ */
+    padding: 15px;
+    border-radius: 8px;
+}
+}
+footer {
+    color: white;
+    background-color: #121213;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #141313;
+    margin-top: 20px;
+    
+}
+/* Estilos para el botón Ir Arriba */
+#btn-ir-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #24158f; /* Color negro elegante */
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 12px 18px;
+    border-radius: 50%; /* Lo hace completamente redondo */
+    font-size: 18px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-ir-arriba.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Efecto visual cuando el usuario pasa el cursor sobre el botón */
+#btn-ir-arriba:hover {
+    background-color: #333; /* Cambia a gris oscuro al pasar el mouse */
+}
+body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .caja { background: #f0f0f0; padding: 15px; border: 1px solid #ccc; margin: 10px 0; }
+        button { padding: 8px 12px; margin-right: 5px; cursor: pointer; }
+        hr { margin: 25px 0; border: 0; border-top: 1px solid #eee; }
