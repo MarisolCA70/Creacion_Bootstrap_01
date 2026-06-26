@@ -154,7 +154,4 @@ footer {
 #btn-ir-arriba:hover {
     background-color: #333; /* Cambia a gris oscuro al pasar el mouse */
 }
-body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
-        .caja { background: #f0f0f0; padding: 15px; border: 1px solid #ccc; margin: 10px 0; }
-        button { padding: 8px 12px; margin-right: 5px; cursor: pointer; }
-        hr { margin: 25px 0; border: 0; border-top: 1px solid #eee; }
+/* Removed duplicate/general utility styles that conflicted with main rules */
