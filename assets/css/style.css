@@ -109,14 +109,17 @@ nav {
     border-radius: 8px;
 }
 }
+.pie-pagina {
+    color: #d1d1d1;
+}
+
 footer {
-    color: white;
+    color: #d1d1d1;
     background-color: #121213;
     text-align: center;
     padding: 15px;
     border-top: 1px solid #141313;
     margin-top: 20px;
-    
 }
 /* Estilos para el botón Ir Arriba */
 #btn-ir-arriba {
