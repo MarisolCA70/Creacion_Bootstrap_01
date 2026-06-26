@@ -109,8 +109,12 @@ nav {
     border-radius: 8px;
 }
 }
-.pie-pagina {
-    color: #d1d1d1;
+.pie-pagina,
+.pie-pagina p,
+.pie-pagina span,
+.pie-pagina a,
+.pie-pagina small {
+    color: #d1d1d1 !important;
 }
 
 footer {
